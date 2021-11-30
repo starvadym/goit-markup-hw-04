@@ -80,6 +80,7 @@ body {
   color: var(--primary-text-color);
   text-decoration: none;
 }
+
 /* Применение свойств flex контейнера */
 .site-nav {
   display: flex;
@@ -88,8 +89,9 @@ body {
   padding: 0;
   margin-left: 93px;
 }
-.header-contacts {
+.header-contacts .item {
   display: flex;
+  align-items: center;
 }
 .page-header * {
   display: flex;
@@ -138,7 +140,23 @@ margin-right: 0;
 
 /* Стили ссылок контактов */
 /* Расширение границ */
-.header-contacts .nav-link {
+.envelope {
+  display: block;
+  fill: #757575;
+  padding-top: 34px;
+  padding-bottom: 34px;
+  padding-right: 10px;
+}
+
+.smartphone {
+  display: block;
+  fill: #757575;
+  padding-top: 32px;
+  padding-bottom: 32px;
+  padding-right: 10px;
+}
+.contact-mail,
+.contact-phone {
   display: inline-block;
   padding-top: 32px;
   padding-bottom: 32px;
@@ -153,17 +171,41 @@ margin-right: 0;
 }
 /* Удаление зазора у крайнего элемента */
 .header-contacts .item:not(:last-child) {
-  margin-right: 50px;
+  margin-right: 30px;
 }
 /*Окончательное позиционирование ссылок контактов */
 .header-contacts .item:first-child {
-  margin-left: 331px;
+  margin-left: 305px;
 }
 
-.header-contacts a:hover,
-.header-contacts a:focus {
+.contact-mail:hover,
+.contact-phone:hover,
+.contact-mail:focus,
+.contact-phone:focus {
   color: var(--accent-color);
+  fill: var(--accent-color);
+  cursor: pointer;
 }
+.envelope:hover,
+.envelope:focus {
+  fill: var(--accent-color);
+}
+.smartphone:hover,
+.smartphone:focus {
+  fill: var(--accent-color);
+}
+
+.contact-mail:hover .envelope,
+.contact-mail:focus .envelope {
+  fill: var(--accent-color);
+  cursor: pointer;
+}
+.contact-phone:hover .smartphone,
+.contact-phone:focus .smartphone {
+  fill: var(--accent-color);
+  cursor: pointer;
+}
+
 .footer-contacts a {
   font-style: normal;
   font-weight: 500;
@@ -203,7 +245,15 @@ margin-right: 0;
   height: 600px;
   margin: 0 auto;
   text-align: center;
-  background: #2f303a;
+  background-image: linear-gradient(
+      to right,
+      rgba(47, 48, 58, 0.4),
+      rgba(47, 48, 58, 0.4)
+    ),
+    url("../images/img_overlay.jpg");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
 }
 
 /* Стиль слогана */
@@ -270,13 +320,23 @@ margin-right: 0;
   display: flex;
   margin: 0;
   padding: 0;
-  padding-top: 86px;
+  padding-top: 94px;
 }
 .advantages .item + .item {
   margin-left: 30px;
 }
 /* Преимущества */
 /* Стили текста заголовков и абзацев */
+.advtgs-container {
+  width: 270px;
+  height: 120px;
+  background: #f5f4fa;
+  border-radius: 4px;
+  margin-bottom: 30px;
+}
+.advntgs-icon {
+  margin: 25px 100px;
+}
 .advantages .item {
   width: 270px;
 }
@@ -342,8 +402,9 @@ margin-right: 0;
 /* Стиль карточки участника команды студии */
 .studio-team .item {
   width: 270px;
-  height: 368px;
+  height: 428px;
   background: #ffffff;
+  /* material shadow v1 */
   box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14),
     0px 2px 1px rgba(0, 0, 0, 0.2);
   border-radius: 0px 0px 4px 4px;
@@ -390,6 +451,115 @@ margin-right: 0;
   letter-spacing: 0.03em;
   color: var(--secondary-text-color);
 }
+/* Выравнивание списка кнопок соцсетей */
+.social-list {
+  list-style: none;
+  display: flex;
+  padding-top: 16px;
+  padding-right: 32px;
+  padding-left: 32px;
+  padding-bottom: 30px;
+}
+/* Очистка крайнего левого отсупа */
+.social-list .social-item + .social-item {
+  margin-left: 10px;
+}
+/* Стили ссылок соцсетей */
+.social-link {
+  display: block;
+  padding: 12px;
+  margin: 0;
+  border: none;
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+  background-color: #ffffff;
+  fill: #afb1b8;
+}
+.social-list a:hover,
+.social-list a:focus {
+  border-radius: 50%;
+  background: #2196f3;
+  fill: #ffffff;
+  cursor: pointer;
+}
+/* Секция клиенты */
+.clients {
+  width: 1600px;
+  margin: 0 auto;
+}
+.clients-container {
+  width: 170px;
+  height: 92px;
+  margin-top: 50px;
+}
+.clients-list {
+  list-style: none;
+  display: flex;
+  padding: 0;
+  margin: 0;
+}
+
+.clients-item a {
+  display: block;
+  width: 170px;
+  height: 92px;
+  border: 1px solid #afb1b8;
+  box-sizing: border-box;
+  border-radius: 4px;
+}
+
+.client-link {
+  display: block;
+  padding: 0;
+  fill: #afb1b8;
+}
+.icon-group1 {
+  width: 168px;
+  height: 90px;
+  padding: 22px 64px 21.3px 63px;
+}
+.icon-group2 {
+  width: 168px;
+  height: 90px;
+  padding: 18px 64px 20px 64px;
+}
+.icon-group3 {
+  width: 168px;
+  height: 90px;
+  padding: 23.7px 63.86px 25.12px 60.68px;
+}
+.icon-group4 {
+  width: 168px;
+  height: 90px;
+  padding: 23.7px 41.56px 25.68px 42px;
+}
+.icon-group5 {
+  width: 168px;
+  height: 90px;
+  padding: 21.77px 52.46px 22.8px 53px;
+}
+.icon-group6 {
+  width: 168px;
+  height: 90px;
+  padding: 21.77px 37.21px 24.31px 37px;
+}
+
+.clients .clients-container + .clients-container {
+  margin-left: 30px;
+}
+.clients-item a:hover,
+.clients-item a:focus {
+  border: 1px solid #2196f3;
+  fill: #2196f3;
+  cursor: pointer;
+}
+.client.link:hover,
+.client.link:focus {
+  fill: #2196f3;
+  cursor: pointer;
+}
+
 /* Стиль футера */
 .footer-style {
   width: 1600px;
@@ -398,6 +568,52 @@ margin-right: 0;
 
   background: #2f303a;
 }
+.footer-style .social-list {
+  list-style: none;
+  display: flex;
+  margin: 0;
+  padding: 0;
+  padding-top: 20px;
+  padding-left: 70px;
+  padding-bottom: 100px;
+}
+.footer-style .social-link {
+  display: block;
+  padding: 12px;
+  margin: 0;
+  border: none;
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+  background-color: rgba(255, 255, 255, 0.1);
+  fill: #ffffff;
+}
+.footer-style .social-link:hover,
+.footer-style .social-link:focus {
+  border-radius: 50%;
+  background: #2196f3;
+  fill: #ffffff;
+  cursor: pointer;
+}
+.appeal {
+  display: inline-block;
+  margin: 0;
+  padding-top: 72px;
+  padding-left: 156px;
+  width: 145px;
+  font-weight: bold;
+  font-size: 14px;
+  line-height: 1.143;
+  letter-spacing: 0.03em;
+  text-transform: uppercase;
+  color: #ffffff;
+}
+.appeal-part {
+  display: flex;
+}
+.additional {
+  display: flex;
+}
 /* Стиль текста адреса */
 .addrss-line {
   margin: 0;
@@ -405,9 +621,13 @@ margin-right: 0;
   font-style: normal;
   font-weight: normal;
   font-size: 14px;
-  line-height: 24px;
+  line-height: 1.714;
   letter-spacing: 0.03em;
   color: var(--primary-white-color);
+}
+.addrss {
+  display: flex;
+  width: 231px;
 }
 /* Страница Портфолио */
 /* Меню для выбора фильтров */
@@ -606,4 +826,16 @@ margin-right: 0;
   padding-left: 24px;
   padding-top: 4px;
   padding-bottom: 20px;
+}
+.project-link {
+  text-decoration: none;
+}
+.projects .item:hover,
+.projects .item:focus {
+  background: #ffffff;
+  border: 1px solid #eeeeee;
+  box-sizing: border-box;
+  box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.12), 0px 4px 4px rgba(0, 0, 0, 0.06),
+    1px 4px 6px rgba(0, 0, 0, 0.16);
+  cursor: pointer;
 }
