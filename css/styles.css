@@ -238,7 +238,7 @@ margin-right: 0;
 }
 /* Секция - Слоган студии */
 .slogan {
-  width: 1600px;
+  max-width: 1600px;
   height: 600px;
   margin: 0 auto;
   text-align: center;
