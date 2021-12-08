@@ -145,7 +145,7 @@ margin-right: 0;
 }
 .contact-mail,
 .contact-phone {
-  display: inline-block;
+  display: flex;
 
   /* Оформление текста */
   font-style: normal;
@@ -226,6 +226,7 @@ margin-right: 0;
 /* Секция - Слоган студии */
 .slogan {
   margin: 0 auto;
+  max-width: 1600px;
   text-align: center;
   padding-top: 200px;
   padding-bottom: 200px;
@@ -321,12 +322,15 @@ margin-right: 0;
 }
 /* Преимущества */
 /* Стили текста заголовков и абзацев */
+
 .advtgs-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
   width: 270px;
   height: 120px;
   background: #f5f4fa;
   border-radius: 4px;
-  padding: 25px 100px;
   margin-bottom: 30px;
 }
 
@@ -354,7 +358,6 @@ margin-right: 0;
 /* Секция - Чем мы занимаемся */
 
 .activity {
-  width: 1600px;
   margin: 0 auto;
   padding-top: 0;
 }
@@ -387,7 +390,6 @@ margin-right: 0;
   margin-left: 30px;
 }
 .studio-team {
-  width: 1600px;
   margin: 0 auto;
   background-color: var(--filter-static-color);
 }
@@ -508,23 +510,20 @@ margin-right: 0;
   justify-content: center;
 }
 
-.clients-item a {
-  display: block;
-  /* width: 170px;
-  height: 92px; */
+.client-link {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0;
+  width: 170px;
+  height: 90px;
+
   border: 1px solid #afb1b8;
   box-sizing: border-box;
   border-radius: 4px;
-}
-
-.client-link {
-  display: block;
-  padding: 0;
   fill: #afb1b8;
 }
-.icon-group1 {
-  width: 168px;
-  height: 90px;
+/* .icon-group1 {
   padding: 22px 64px 21.3px 63px;
 }
 .icon-group2 {
@@ -551,7 +550,7 @@ margin-right: 0;
   width: 168px;
   height: 90px;
   padding: 21.77px 37.21px 24.31px 37px;
-}
+} */
 
 .clients-item + .clients-item {
   margin-left: 30px;
@@ -702,7 +701,6 @@ margin-right: 0;
   flex-wrap: wrap;
 }
 .projects-list {
-  width: 1600px;
   margin: 0 auto;
 }
 .projects .item {
