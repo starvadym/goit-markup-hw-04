@@ -327,10 +327,11 @@ margin-right: 0;
   background: #f5f4fa;
   border-radius: 4px;
   margin-bottom: 30px;
+  padding: 25px 100px;
 }
-.advntgs-icon {
-  margin: 25px 100px;
-}
+/* .advntgs-icon {
+
+} */
 .advantages .item {
   width: 270px;
 }
