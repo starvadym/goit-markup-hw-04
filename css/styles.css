@@ -19,24 +19,16 @@
 
 body {
   font-family: "Roboto", sans-serif;
-  /* background-color: var(--primary-white-color); */
-  background: #e5e5e5;
   color: var(--primary-text-color);
 }
 .page-header {
-  width: 1600px;
-  height: 88px;
   margin: 0 auto;
-  padding-bottom: 8px;
   background-color: var(--primary-white-color);
-}
-.border-line {
-  width: 1600px;
-  height: 80px;
   border-bottom-style: solid;
   border-bottom-width: 1px;
   border-bottom-color: #ececec;
 }
+
 /* Вспомогательная обводка границ блока */
 /* margin-bottom: 50px;
   outline: 2px solid tomato;
@@ -52,11 +44,10 @@ body {
   letter-spacing: 0.03em;
   color: #000000;
   text-decoration: none;
-  padding-top: 24px;
 }
 .footer-style .logo {
   display: inline-block;
-  padding-top: 60px;
+  justify-items: center;
 }
 .logoweb {
   color: #2196f3;
@@ -95,6 +86,7 @@ body {
 }
 .page-header * {
   display: flex;
+  align-items: center;
 }
 
 /* .site-nav .item{
@@ -134,10 +126,6 @@ margin-right: 0;
   padding: 0;
 }
 
-.footer-contacts {
-  padding-bottom: 60px;
-}
-
 /* Стили ссылок контактов */
 /* Расширение границ */
 .envelope {
@@ -158,8 +146,7 @@ margin-right: 0;
 .contact-mail,
 .contact-phone {
   display: inline-block;
-  padding-top: 32px;
-  padding-bottom: 32px;
+
   /* Оформление текста */
   font-style: normal;
   font-weight: 500;
@@ -212,7 +199,7 @@ margin-right: 0;
   color: rgba(255, 255, 255, 0.6);
   text-decoration: none;
   display: inline-block;
-  padding-top: 9px;
+  margin-top: 9px;
 }
 .footer-contacts a:hover,
 .footer-contacts a:focus {
@@ -238,10 +225,10 @@ margin-right: 0;
 }
 /* Секция - Слоган студии */
 .slogan {
-  max-width: 1600px;
-  height: 600px;
   margin: 0 auto;
   text-align: center;
+  padding-top: 200px;
+  padding-bottom: 200px;
   background-image: linear-gradient(
       to right,
       rgba(47, 48, 58, 0.4),
@@ -256,13 +243,13 @@ margin-right: 0;
 /* Стиль слогана */
 
 .slogan-statement {
-  margin: 0px;
-  padding-top: 200px;
+  margin: 0px auto;
+  max-width: 696px;
+  max-height: 120px;
   font-style: normal;
   font-weight: 900;
   font-size: 44px;
   line-height: 1.363;
-  /* text-align: center; */
   letter-spacing: 0.06em;
   text-transform: uppercase;
   color: var(--primary-white-color);
@@ -285,15 +272,14 @@ margin-right: 0;
 
 /* Стиль кнопки - заказать работу */
 .btn-type {
-  display: inline-block;
   width: 200px;
   height: 50px;
   background: var(--static-color);
   box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
   border-radius: 4px;
   margin-top: 30px;
-  margin-bottom: 200px;
 }
+
 .btn-type:hover,
 .btn-type:focus {
   width: 200px;
@@ -306,9 +292,7 @@ margin-right: 0;
 /* Секция - Преимущества студии */
 
 .advantages {
-  width: 1600px;
   margin: 0 auto;
-  padding-top: 0;
 }
 /* Горизонтальное размещение Flex */
 
@@ -317,8 +301,8 @@ margin-right: 0;
   display: flex;
   margin: 0;
   padding: 0;
-  padding-top: 94px;
 }
+
 .advantages .item + .item {
   margin-left: 30px;
 }
@@ -414,6 +398,13 @@ margin-right: 0;
   margin-top: 50px;
   display: flex;
 }
+
+.team-cont {
+  padding-top: 30px;
+  padding-bottom: 30px;
+  padding-left: 32px;
+  padding-right: 32px;
+}
 .team {
   margin: 0;
   font-style: normal;
@@ -427,7 +418,6 @@ margin-right: 0;
 /* Стиль текста - имя */
 .team-member {
   margin: 0;
-  margin-top: 30px;
   font-style: normal;
   font-weight: 500;
   font-size: 16px;
@@ -452,10 +442,8 @@ margin-right: 0;
 .social-list {
   list-style: none;
   display: flex;
-  padding-top: 16px;
-  padding-right: 32px;
-  padding-left: 32px;
-  padding-bottom: 30px;
+  margin-top: 16px;
+  padding: 0;
 }
 /* Очистка крайнего левого отсупа */
 .social-list .social-item + .social-item {
@@ -482,12 +470,9 @@ margin-right: 0;
 }
 /* Секция клиенты */
 .clients {
-  width: 1600px;
   margin: 0 auto;
 }
 .clients-container {
-  width: 170px;
-  height: 92px;
   margin-top: 50px;
 }
 .clients-list {
@@ -559,21 +544,20 @@ margin-right: 0;
 
 /* Стиль футера */
 .footer-style {
-  width: 1600px;
-  height: 252px;
-  margin: 0 auto;
-
+  padding-top: 60px;
+  padding-bottom: 60px;
   background: #2f303a;
 }
+
 .footer-style .social-list {
   list-style: none;
   display: flex;
   margin: 0;
   padding: 0;
-  padding-top: 20px;
-  padding-left: 70px;
-  padding-bottom: 100px;
+  margin-top: 20px;
+  margin-left: 70px;
 }
+
 .footer-style .social-link {
   display: block;
   padding: 12px;
@@ -595,8 +579,7 @@ margin-right: 0;
 .appeal {
   display: inline-block;
   margin: 0;
-  padding-top: 72px;
-  padding-left: 156px;
+  margin-left: 156px;
   width: 145px;
   font-weight: bold;
   font-size: 14px;
@@ -607,6 +590,7 @@ margin-right: 0;
 }
 .appeal-part {
   display: flex;
+  align-items: center;
 }
 .additional {
   display: flex;
@@ -633,7 +617,7 @@ margin-right: 0;
   padding: 0;
   margin: 0 auto;
   display: flex;
-  margin-left: 295px;
+  justify-content: center;
 }
 /* Очистка крайнего отсупа элемента */
 
@@ -782,6 +766,11 @@ margin-right: 0;
 .cont-border {
   width: 370px;
   height: 110px;
+
+  padding-top: 20px;
+  padding-bottom: 20px;
+  padding-left: 24px;
+  padding-right: 24px;
   /* Установим стили правой рамки */
   border-right-width: 1px;
   border-right-style: solid;
@@ -807,9 +796,8 @@ margin-right: 0;
   color: var(--title-text-color);
   margin: 0;
   padding: 0;
-  padding-left: 24px;
-  padding-top: 20px;
 }
+
 /* Стиль текста - Тип проекта */
 .project-type {
   font-style: normal;
@@ -820,10 +808,8 @@ margin-right: 0;
   color: var(--secondary-text-color);
   margin: 0;
   padding: 0;
-  padding-left: 24px;
-  padding-top: 4px;
-  padding-bottom: 20px;
 }
+
 .project-link {
   text-decoration: none;
 }
