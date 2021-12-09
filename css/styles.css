@@ -409,7 +409,6 @@ margin-right: 0;
   list-style-type: none;
   margin: 0;
   padding: 0;
-  margin-top: 50px;
   display: flex;
 }
 
@@ -421,6 +420,7 @@ margin-right: 0;
 }
 .team {
   margin: 0;
+  margin-bottom: 50px;
   font-style: normal;
   font-weight: bold;
   font-size: 36px;
@@ -432,6 +432,7 @@ margin-right: 0;
 /* Стиль текста - имя */
 .team-member {
   margin: 0;
+  margin-bottom: 10px;
   font-style: normal;
   font-weight: 500;
   font-size: 16px;
@@ -443,7 +444,7 @@ margin-right: 0;
 /* Стиль текста - название должности*/
 .team-position {
   margin: 0;
-  margin-top: 10px;
+  margin-bottom: 16px;
   font-style: normal;
   font-weight: normal;
   font-size: 16px;
@@ -456,7 +457,6 @@ margin-right: 0;
 .social-list {
   list-style: none;
   display: flex;
-  margin-top: 16px;
   padding: 0;
 }
 /* Очистка крайнего левого отсупа */
@@ -486,10 +486,6 @@ margin-right: 0;
 .clients {
   margin: 0 auto;
 }
-
-/* .clients-container {
-  margin-top: 50px;
-} */
 
 .clients-title {
   margin: 0;
